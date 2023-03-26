@@ -29,3 +29,9 @@ export const getPostList = async (): Promise<Post[]> => {
   const { results } = await notion.databases.query({ database_id: process.env.NOTION_DATABASE_ID });
   return results.filter(isFullPage).filter(byPublic).sort(byOrder).map(convertPost);
 };
+
+export const getPost = async (id: string): Promise<Post> => {
+  const page = await notion.pages.retrieve({ page_id: id });
+  if (!isFullPage(page)) throw new Error('Page is not found.');
+  return convertPost(page);
+};
