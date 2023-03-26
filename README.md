@@ -9,3 +9,9 @@
 - refactor: A code change that neither fixes a bug nor adds a feature
 - test: Adding missing tests
 - chore: Changes to the build process or auxiliary tools and libraries such as documentation generation
+
+## Tech Stack
+
+- Next.js(13 version)
+- TypeScript
+- NotionAPI
