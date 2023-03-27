@@ -7,5 +7,5 @@ export type Tag = {
 export type Post = {
   id: string;
   title: string;
-  tags: Tag[];
+  tagList: Tag[];
 };
