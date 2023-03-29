@@ -1,11 +1,11 @@
-export type Tag = {
+export type TagType = {
   id: string;
   name: string;
   color: string;
 };
 
-export type Post = {
+export type PostType = {
   id: string;
   title: string;
-  tagList: Tag[];
+  tagList: TagType[];
 };
