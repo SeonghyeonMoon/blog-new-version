@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 body {
+  transition: background-color 0.2s linear, color 0.2s linear;
 }
 
 html.dark body {
