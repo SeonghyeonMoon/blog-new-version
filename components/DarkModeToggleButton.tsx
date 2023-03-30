@@ -3,15 +3,16 @@
 import { useEffect, useState } from 'react';
 
 const DarkModeToggleButton = () => {
-  const [isDark, setIsDark] = useState(window.matchMedia('(prefers-color-scheme: dark)').matches);
+  const [isDark, setIsDark] = useState(false);
 
   const toggleColorMode = () => {
     setIsDark(!isDark);
+    isDark ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark');
   };
 
   useEffect(() => {
-    isDark ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark');
-  }, [isDark]);
+    setIsDark(window.matchMedia('(prefers-color-scheme: dark)').matches);
+  }, []);
 
   return (
     <button onClick={toggleColorMode} className='relative h-7 w-12 rounded-full bg-blue-light dark:bg-hr-dark'>
