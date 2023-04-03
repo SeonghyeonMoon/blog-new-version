@@ -1,5 +1,7 @@
 import './globals.css';
 import { Roboto } from 'next/font/google';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 const roboto = Roboto({ weight: '400', subsets: ['latin'] });
 
@@ -15,7 +17,9 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang='ko'>
       <body className={roboto.className}>
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
