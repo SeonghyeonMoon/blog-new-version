@@ -10,7 +10,7 @@ const HomePage = async () => {
   return (
     <>
       <Banner />
-      <PostList postList={data} />;
+      <PostList postList={data} />
     </>
   );
 };
