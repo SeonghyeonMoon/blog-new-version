@@ -1,4 +1,7 @@
 import './globals.css';
+import { Roboto } from 'next/font/google';
+
+const roboto = Roboto({ weight: '400', subsets: ['latin'] });
 
 export const metadata = {
   title: {
@@ -11,7 +14,9 @@ export const metadata = {
 const HomeLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang='ko'>
-      <body>{children}</body>
+      <body className={roboto.className}>
+        {children}
+      </body>
     </html>
   );
 };
