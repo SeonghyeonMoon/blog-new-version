@@ -1,16 +1,16 @@
 import { getPostList } from '@/service/post';
 import Banner from '@/components/Banner';
-import PostList from '@/components/PostList';
+import SearchBarAndPostList from '@/components/SearchBarAndPostList';
 
 export const revalidate = 3600;
 
 const HomePage = async () => {
-  const data = await getPostList();
+  const postList = await getPostList();
 
   return (
     <>
       <Banner />
-      <PostList postList={data} />
+      <SearchBarAndPostList postList={postList} />
     </>
   );
 };
