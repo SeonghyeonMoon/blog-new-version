@@ -8,9 +8,9 @@ type Props = {
 
 const PostList = ({ postList }: Props) => {
   return (
-    <ul className='mx-auto max-w-3xl border-t border-hr-light dark:border-hr-dark'>
+    <ul className='mx-auto max-w-3xl border-t border-hr-light transition-colors dark:border-hr-dark'>
       {postList.map(({ id, title, tagList }) => (
-        <li key={id} className='border-b border-hr-light pt-3 pb-1 dark:border-hr-dark'>
+        <li key={id} className='border-b border-hr-light pt-3 pb-1 transition-colors dark:border-hr-dark'>
           <Link href={`/post/${id}`}>
             <TagList tagList={tagList} />
             <h3 className='mt-1 text-2xl'>{title}</h3>
