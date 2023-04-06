@@ -16,7 +16,7 @@ module.exports = {
       },
       default: {
         light: '#f1f0f0',
-        dark: '#373737', 
+        dark: '#373737',
       },
       font: {
         light: '#404040',
@@ -62,10 +62,7 @@ module.exports = {
         light: '#dfdfde',
         dark: '#373737',
       },
-      code: {
-        light: '#ededeb',
-        dark: '#292927',
-      }
+      code: '#eb5757',
     },
   },
   plugins: [],
