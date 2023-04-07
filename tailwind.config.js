@@ -6,6 +6,9 @@ module.exports = {
       pattern: /^bg-.*-(light|dark)$/,
       variants: ['dark'],
     },
+    {
+      pattern: /^text-code$/,
+    },
   ],
   darkMode: 'class',
   theme: {
