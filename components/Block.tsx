@@ -1,5 +1,6 @@
 import { BlockType } from '@/types/block';
 import BlockText from './BlockText';
+import CodeBlock from './CodeBlock';
 
 type Props = {
   block: BlockType;
@@ -57,6 +58,8 @@ export default function Block({ block }: Props) {
           ))}
         </ol>
       );
+    case 'code':
+      return <CodeBlock block={block} />;
     default:
       return <></>;
   }
