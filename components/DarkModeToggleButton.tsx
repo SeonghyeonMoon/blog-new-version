@@ -7,12 +7,15 @@ const DarkModeToggleButton = () => {
 
   const toggleColorMode = () => {
     setIsDark(!isDark);
-    isDark ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark');
   };
 
   useEffect(() => {
     setIsDark(window.matchMedia('(prefers-color-scheme: dark)').matches);
   }, []);
+
+  useEffect(() => {
+    isDark ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark');
+  }, [isDark]);
 
   return (
     <button onClick={toggleColorMode} className='relative h-7 w-12 rounded-full bg-blue-light dark:bg-hr-dark'>
