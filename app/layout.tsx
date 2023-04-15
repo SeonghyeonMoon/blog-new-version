@@ -17,7 +17,6 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang='ko'>
       <body className={roboto.className}>
-        <Header />
         {children}
         <Footer />
       </body>

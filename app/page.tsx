@@ -1,4 +1,5 @@
 import { getPostList } from '@/service/post';
+import Header from '@/components/Header';
 import Banner from '@/components/Banner';
 import SearchBarAndPostList from '@/components/SearchBarAndPostList';
 
@@ -9,6 +10,7 @@ const HomePage = async () => {
 
   return (
     <>
+      <Header pathname='home' />
       <Banner />
       <SearchBarAndPostList postList={postList} />
     </>

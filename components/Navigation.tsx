@@ -1,22 +1,17 @@
-'use client';
-
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
 
-const Navigation = () => {
-  const [pathname, setPathname] = useState('');
+type Props = {
+  pathname: string;
+};
 
-  useEffect(() => {
-    setPathname(window.location.pathname.split('/')[1]);
-  }, []);
-
+const Navigation = ({ pathname }: Props) => {
   return (
     <nav>
       <ul className='flex gap-3'>
-        <li className={`${pathname === '/about' && 'opacity-30'}`}>
+        <li className={`${pathname !== 'home' && pathname !== 'post' && 'opacity-30'}`}>
           <Link href='/'>Post</Link>
         </li>
-        <li className={`${pathname !== '/about' && 'opacity-30'}`}>
+        <li className={`${pathname !== 'about' && 'opacity-30'}`}>
           <Link href='about'>About</Link>
         </li>
       </ul>
