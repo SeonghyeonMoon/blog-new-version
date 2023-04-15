@@ -18,12 +18,11 @@ const BlockText = ({ textList }: Props) => {
           );
         }
 
-        const { bold, code, italic, strikethrough, underline } = annotations;
-        const isAnnotated = bold || code || italic || strikethrough || underline;
 
-        if (isAnnotated) {
+        const annotateClassName = getAnnotateClassName(annotations)
+        if (annotateClassName) {
           return (
-            <span key={index} className={getAnnotateClassName(annotations)}>
+            <span key={index} className={annotateClassName}>
               {plain_text}
             </span>
           );
