@@ -2,6 +2,7 @@ import './globals.css';
 import { Roboto } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import PageUpButton from '@/components/PageUpButton';
 
 const roboto = Roboto({ weight: '400', subsets: ['latin'] });
 
@@ -20,6 +21,7 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
         {children}
         <Footer />
       </body>
+      <PageUpButton />
     </html>
   );
 };
