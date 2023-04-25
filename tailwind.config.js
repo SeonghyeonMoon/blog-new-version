@@ -3,7 +3,7 @@ module.exports = {
   content: ['./app/**/*.{js,jsx,ts,tsx}', './components/**/*.{js,jsx,ts,tsx}'],
   safelist: [
     {
-      pattern: /^bg-.*-(light|dark)$/,
+      pattern: /^(bg|border)-.*-(light|dark)$/,
       variants: ['dark'],
     },
     {
